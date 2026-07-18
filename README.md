@@ -7,11 +7,13 @@ A multi-agent AI system that pre-screens, critiques, and scores innovation proje
 ## Documentation
 
 | File | Content |
-|---|---|
-| [01_executive_summary.md](docs/01_executive_summary.md) | System vision, architecture, agent checklists, scoring & conflict-resolution matrix |
-| [02_agent_skills_and_toolsets.md](docs/02_agent_skills_and_toolsets.md) | Skill/tool mapping per agent (gstack CEO/QA/Engineering, Anthropic skills), Coordinator responsibilities, learning loop |
-| [03_implementation_plan.md](docs/03_implementation_plan.md) | Pre-hackathon checklist, hour-by-hour 48h sprint plan, risk register, generalization to other domains |
-| [04_presentation_outline.md](docs/04_presentation_outline.md) | 10-slide judging deck structure with demo script and Q&A preparation |
+| ---- | ------- |
+| [01_executive_summary.md](01_executive_summary.md) | System vision, architecture, agent checklists, scoring & conflict-resolution matrix |
+| [02_agent_skills_and_toolsets.md](02_agent_skills_and_toolsets.md) | Skill/tool mapping per agent (gstack CEO/QA/Engineering, Anthropic skills), Coordinator responsibilities, learning loop |
+| [03_implementation_plan.md](03_implementation_plan.md) | Pre-hackathon checklist, hour-by-hour 48h sprint plan, risk register, generalization to other domains |
+| [04_presentation_outline.md](04_presentation_outline.md) | 10-slide judging deck structure with demo script and Q&A preparation |
+
+Arabic versions: [README_ar.md](README_ar.md) · [01](01_executive_summary_ar.md) · [02](02_agent_skills_and_toolsets_ar.md) · [03](03_implementation_plan_ar.md) · [04](04_presentation_outline_ar.md)
 
 ## Key design principles
 

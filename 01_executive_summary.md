@@ -44,42 +44,8 @@ To ensure absolute logical coverage, the system distributes tasks across three c
 
 To arrive at an objective conclusion without human bias, the system uses a dual quantitative scoring system blended with a **Coordinator Agent** for conflict resolution.
 
-```
-+--------------------------+
-| Project Submission Ingest|
-| (Anonymize + Sanitize)   |
-+------------+-------------+
-             |
-             v
-+--------------------------+
-| Critical Risk Filtering  | ----> [High Risk/Fatal Flaw] -> REJECT
-+------------+-------------+       (+ constructive feedback)
-             | [Passes Gate]
-             v
-+------------------+------------------+
-|                  |                  |
-v                  v                  v
-+--------------+ +--------------+ +--------------+
-| Agent 1:     | | Agent 2:     | | Agent 3:     |
-| Science &    | | Exec &       | | Impact &     |
-| Innovation   | | Engineering  | | Market       |
-+------+-------+ +------+-------+ +------+-------+
-       |                |                |
-       +----------------+----------------+
-                        | (Scores, Rationales, Confidence)
-                        v
-             +--------------------+
-             | Coordinator Agent  | --> [Low confidence] -> HUMAN REVIEW
-             | (Conflict Resolve, |
-             |  Batch Normalize)  |
-             +---------+----------+
-                       |
-                       v
-             +--------------------+
-             | Final Balanced     | -> Ranked shortlist for
-             | Metric + Report    |    the human panel
-             +--------------------+
-```
+![Pipeline architecture](figures/pipeline_en.svg)
+
 
 - **The Quantitative Grid:** Every agent assigns a logical score from **1 to 10** based entirely on their respective checklists, accompanied by a written rationale and confidence level.
 - **Conflict Resolution Protocol:** If the Executive Agent rates an idea highly (e.g., 9/10 for buildability) but the Critical/Negative Agent scores it low (e.g., 3/10 due to high operational friction), the **Coordinator Agent** steps in. Instead of just averaging the numbers, the Coordinator compiles the qualitative text justifications (*rationales*) provided by both sub-agents. In contested cases, a **debate round** lets agents read each other's rationales and optionally revise before the Coordinator decides.
