@@ -46,7 +46,6 @@ To arrive at an objective conclusion without human bias, the system uses a dual 
 
 ![Pipeline architecture](figures/pipeline_en.svg)
 
-
 - **The Quantitative Grid:** Every agent assigns a logical score from **1 to 10** based entirely on their respective checklists, accompanied by a written rationale and confidence level.
 - **Conflict Resolution Protocol:** If the Executive Agent rates an idea highly (e.g., 9/10 for buildability) but the Critical/Negative Agent scores it low (e.g., 3/10 due to high operational friction), the **Coordinator Agent** steps in. Instead of just averaging the numbers, the Coordinator compiles the qualitative text justifications (*rationales*) provided by both sub-agents. In contested cases, a **debate round** lets agents read each other's rationales and optionally revise before the Coordinator decides.
 - **Batch Ranking & Normalization:** The real institutional task is selecting the top candidates from hundreds of submissions, not judging one in isolation. Absolute scores drift between runs, so the Coordinator applies a **cross-batch normalization / pairwise-comparison pass** to produce a stable ranking. **Measured consistency** is a design requirement: the same proposal evaluated twice must report its score variance, and that variance is published alongside results.
